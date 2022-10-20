@@ -38,6 +38,7 @@ function Header() {
 
           <HeaderCart>
           <ShoppingBasketIcon/>
+          <CartCount>7</CartCount>
           </HeaderCart>
         </HeaderNavItems>
 
@@ -53,6 +54,7 @@ const HeaderBar = styled.div`
   display: flex;
   align-items: center;
   color: white;
+  justify-content: space-between;
 
 `
 
@@ -70,6 +72,7 @@ const LineOne = styled.div`
 `
 
 const LineTwo = styled.div`
+font-weight: 700;
 `
 
 const HeaderSearch = styled.div`
@@ -81,8 +84,12 @@ const HeaderSearchInput = styled.input`
 
 const HeaderSearchContainer = styled.div``
 
-const HeaderNavItems = styled.div``
+const HeaderNavItems = styled.div`
+display: flex`
 
-const HeaderOption = styled.div``
+const HeaderOption = styled.div`
+padding: 10px;`
 
 const HeaderCart = styled.div``;
+
+const CartCount = styled.div``
