@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import SearchIcon from '@mui/icons-material/Search';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+
 
 function Header() {
   return (
@@ -16,9 +19,27 @@ function Header() {
         
         <HeaderSearch>
           <HeaderSearchInput type='text'>
-
           </HeaderSearchInput>
+          <HeaderSearchContainer>
+          <SearchIcon/>
+          </HeaderSearchContainer>
         </HeaderSearch>
+
+        <HeaderNavItems>
+          <HeaderOption>
+            <LineOne>Hello, Artem</LineOne>
+            <LineTwo> Account & List</LineTwo>
+          </HeaderOption>
+
+          <HeaderOption>
+            <LineOne>Returns</LineOne>
+            <LineTwo>& Orders</LineTwo>
+          </HeaderOption>
+
+          <HeaderCart>
+          <ShoppingBasketIcon/>
+          </HeaderCart>
+        </HeaderNavItems>
 
       </HeaderBar>
   )
@@ -52,7 +73,16 @@ const LineTwo = styled.div`
 `
 
 const HeaderSearch = styled.div`
+display: flex;
 `
 
 const HeaderSearchInput = styled.input`
 `
+
+const HeaderSearchContainer = styled.div``
+
+const HeaderNavItems = styled.div``
+
+const HeaderOption = styled.div``
+
+const HeaderCart = styled.div``;
