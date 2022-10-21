@@ -1,9 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-
+import {Link} from 'react-router-dom';
 
 function Header() {
   return (
@@ -40,10 +40,14 @@ function Header() {
             <LineTwo>& Orders</LineTwo>
           </HeaderOption>
 
+          
           <HeaderCart>
+          <Link to="/cart">
           <ShoppingBasketIcon/>
           <CartCount>7</CartCount>
+          </Link>
           </HeaderCart>
+          
         </HeaderNavItems>
 
       </HeaderBar>
@@ -121,8 +125,15 @@ padding: 10px;`
 
 const HeaderCart = styled.div`
 display: flex;
-padding-right: 9px;
-align-items: center;`
+a {
+  display: flex;
+  padding-right: 9px;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}`
+
+
 
 const CartCount = styled.div`
 padding-left: 4px;`
