@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 
 function Header() {
@@ -13,8 +14,11 @@ function Header() {
     </HeaderLogo>
         
         <HeaderAddress>
+          <LocationOnIcon />
+          <HeaderOption>
           <LineOne>Deliver to</LineOne>
           <LineTwo>Select your address</LineTwo>
+          </HeaderOption>
         </HeaderAddress>
         
         <HeaderSearch>
@@ -66,6 +70,10 @@ img {
 `
 
 const HeaderAddress = styled.div`
+display: flex;
+align-items: center;
+padding-left: 9px;
+
 `
 
 const LineOne = styled.div`
@@ -77,12 +85,28 @@ font-weight: 700;
 
 const HeaderSearch = styled.div`
 display: flex;
+flex-grow: 1;
+height: 40px;
+boerder-radius: 4px;
+overflow: hidden;
+margin-left: 4px;
 `
 
 const HeaderSearchInput = styled.input`
+flex-grow: 1;
+:focus {
+  outline: none;
+}
 `
 
-const HeaderSearchContainer = styled.div``
+const HeaderSearchContainer = styled.div`
+display: flex;
+background-color: #febd69;
+color: black;
+width: 45px;
+justify-content: center;
+align-items: center;
+`
 
 const HeaderNavItems = styled.div`
 display: flex`
@@ -90,6 +114,9 @@ display: flex`
 const HeaderOption = styled.div`
 padding: 10px;`
 
-const HeaderCart = styled.div``;
+const HeaderCart = styled.div`
+display: flex;
+padding-right: 9px;
+align-items: center;`
 
 const CartCount = styled.div``
