@@ -33,7 +33,6 @@ z-index: 1;
 
 const Content = styled.div`
 color: black;
-background: white;
 padding-left: 10px;
 padding-right: 10px;
 margin-top: -350px;
