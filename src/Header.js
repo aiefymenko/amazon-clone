@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -10,7 +10,9 @@ function Header() {
     <HeaderBar>
 
     <HeaderLogo>
+      <Link to="/">
     <img src='https://i0.wp.com/www.dafontfree.co/wp-content/uploads/2021/11/Amazon-Logo-Font-1-scaled.jpg?resize=2560%2C1578' alt='amazon logo'></img>
+    </Link>
     </HeaderLogo>
         
         <HeaderAddress>
@@ -130,7 +132,7 @@ a {
   padding-right: 9px;
   align-items: center;
   color: white;
-  text-decoration: none;
+  text-decoration: none;  
 }`
 
 
