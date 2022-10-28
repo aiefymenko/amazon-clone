@@ -61,6 +61,6 @@ color: black;
 padding-left: 10px;
 padding-right: 10px;
 margin-top: -350px;
-// z-index: 100;
+z-index: 100;
 display: flex;
 ` 
