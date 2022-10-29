@@ -8,10 +8,10 @@ function Product({title, price, rating, image}) {
       {title}
         </Title>
         <Price>
-        {price}
+        ${price}
         </Price>
         <Rating>
-        {rating} 
+        {Array(rating).fill().map(i => <p>⭐</p>)} 
         </Rating>
         <Image src={image}/>
         <ButtonWrapper>
@@ -45,6 +45,7 @@ margin-top: 3px;
 `
 
 const Rating = styled.div`
+display: flex;
 `
 
 const Image = styled.img`
