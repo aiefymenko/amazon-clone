@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Product() {
+function Product({title, price, rating, image}) {
   return (
     <Container>
       <Title>
-      iPad Pro
+      {title}
         </Title>
         <Price>
-        1499$
+        {price}
         </Price>
         <Rating>
-        :stars  
+        {rating} 
         </Rating>
-        <Image src='https://m.media-amazon.com/images/I/61vsK7h3zVL._AC_SX679_.jpg'/>
+        <Image src={image}/>
         <ButtonWrapper>
         <AddToCartButton>
           Add to Cart
