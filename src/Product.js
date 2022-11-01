@@ -19,7 +19,6 @@ function Product({title, price, rating, image}) {
           Add to Cart
         </AddToCartButton>
         </ButtonWrapper>
-
       </Container>
   )
 }
