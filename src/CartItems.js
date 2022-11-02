@@ -4,7 +4,7 @@ import styled from 'styled-components';
 function CartItems() {
   return (
     <Container>
-
+      Cart Items
     </Container>
   )
 }
@@ -12,4 +12,7 @@ function CartItems() {
 export default CartItems
 
 const Container = styled.div`
+height: 300px;
+background-color: white;
+flex: 0.8;
 `
