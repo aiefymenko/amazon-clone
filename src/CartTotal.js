@@ -1,11 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import CartItem from './CartItem';
 
 
 function CartTotal() {
   return (
     <Container>
-      Cart total
+      <Title>
+        Shopping Cart
+      </Title>
+      <hr/> 
+      <ItemsContainer>
+        <CartItem />
+      </ItemsContainer>
     </Container>
   )
 }
@@ -16,4 +23,11 @@ const Container = styled.div`
 height: 200px;
 background-color: white;
 flex: 0.2;
+padding: 20px;
+`
+
+const Title = styled.div`
+`
+
+const ItemsContainer = styled.div`
 `

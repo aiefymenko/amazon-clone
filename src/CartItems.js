@@ -15,4 +15,6 @@ const Container = styled.div`
 height: 300px;
 background-color: white;
 flex: 0.8;
+margin-right: 20px;
+padding: 20px;
 `
