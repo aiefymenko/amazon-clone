@@ -42,6 +42,7 @@ width: 180px;
 height: 180px;
 flex-shrink: 0;
 flex-grow: 0;
+margin-right: 16px;
 img {
   object-fit: contain;
   height: 100%;
@@ -68,6 +69,9 @@ const CartItemQuantity = styled.div`
 `
 
 const CartItemDelete = styled.div`
+color: #007185;
+margin-left: 16px;
+cursor: pointer;
 `
 
 const CartItemPrice = styled.div`
