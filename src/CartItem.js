@@ -5,7 +5,7 @@ function CartItem() {
   return (
    <Container>
     <ImageContainer>
-    <img src={'https://images-na.ssl-images-amazon.com/images/I/81SGb5l%2BlZL._AC_SL1500_.jpg'} alt/>
+    <img src={'https://images-na.ssl-images-amazon.com/images/I/81SGb5l%2BlZL._AC_SL1500_.jpg'}/>
     </ImageContainer>
     <CartItemInfo>
       <CartItemDescription>
