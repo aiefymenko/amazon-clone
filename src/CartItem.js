@@ -1,19 +1,21 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import styled from 'styled-components';
 
-function CartItem() {
+function CartItem({id , item}) {
+
   return (
    <Container>
     <ImageContainer>
-    <img src={'https://images-na.ssl-images-amazon.com/images/I/81SGb5l%2BlZL._AC_SL1500_.jpg'}/>
+    <img src={item.image}/>
     </ImageContainer>
     <CartItemInfo>
       <CartItemDescription>
-        <h2>Hello</h2>
+        <h2>{item.name}</h2>
       </CartItemDescription>
       <CartItemBottom>
       <CartItemQuantity>
-     5
+     {item.quantity}
       </CartItemQuantity>
       <CartItemDelete>
         Delete
@@ -23,7 +25,7 @@ function CartItem() {
     </CartItemInfo>
 
     <CartItemPrice>
-    $1499
+    ${item.price}
     </CartItemPrice>
     </Container>
   )

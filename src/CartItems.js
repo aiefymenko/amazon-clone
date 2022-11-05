@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import CartItem from './CartItem';
 
-function CartItems() {
+function CartItems({cartItems}) {
+
+
   return (
     <Container>
             <Title>
@@ -10,7 +12,15 @@ function CartItems() {
       </Title>
       <hr/> 
       <ItemsContainer>
-        <CartItem />
+        {
+          cartItems.map((item) => (
+            <CartItem 
+            key = {item.id}
+            id = {item.id}
+            item = {item.product}
+            />
+          ))
+        }
       </ItemsContainer>
     </Container>
   )

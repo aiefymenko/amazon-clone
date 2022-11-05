@@ -23,7 +23,6 @@ const [cartItems, setCartItems] = useState([]);
     getCartItems()
   }, []);
 
-  console.log(cartItems);
 
 
   return (
@@ -32,7 +31,7 @@ const [cartItems, setCartItems] = useState([]);
       <Header />
 
       <Routes>
-        <Route exact path="/cart" element={<Cart/>}>
+        <Route exact path="/cart" element={<Cart cartItems={cartItems}/>}>
         </Route>
 
         <Route exact path="/" element={<Home/>}>
