@@ -53,6 +53,7 @@ img {
 }
 `
 const CartItemInfo = styled.div`
+flex-grow: 1;
 `
 
 const CartItemDescription = styled.div`

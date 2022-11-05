@@ -13,7 +13,7 @@ function addToCart() {
         quantity: doc.data().quantity + 1
     })
     } else {
-      db.collection("cartItem").doc(id).set({
+      db.collection("cartItems").doc(id).set({
         name: title,
         price: price,
         image: image,
@@ -85,4 +85,5 @@ height: 30px;
 background-color: #f0c14b;
 border: 2px solid #a88734;
 border-radius: 2px;
+cursor: pointer;
 `
