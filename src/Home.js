@@ -40,6 +40,7 @@ useEffect(() => {
           products.map((data) => (
             <Product 
             key = {data.id}
+            id = {data.id}
             title = {data.product.name}
             price = {data.product.price}
             rating = {data.product.rating}

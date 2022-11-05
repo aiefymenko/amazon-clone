@@ -37,6 +37,7 @@ padding: 20px;
 `
 
 const Title = styled.div`
+margin-bottom: 8px;
 `
 
 const ItemsContainer = styled.div`
