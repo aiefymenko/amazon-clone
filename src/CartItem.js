@@ -4,6 +4,11 @@ import styled from 'styled-components';
 
 function CartItem({id , item}) {
 
+  let options =[];
+  for (let i = 1; i < Math.max(item.quantity + 1, 20); i++) {
+    options.push(<option value={i}> Qty: {i}</option>)
+  }
+
   return (
    <Container>
     <ImageContainer>
@@ -15,6 +20,9 @@ function CartItem({id , item}) {
       </CartItemDescription>
       <CartItemBottom>
       <CartItemQuantity>
+        <select value={item.quantity}>
+        {options}
+        </select>
      {item.quantity}
       </CartItemQuantity>
       <CartItemDelete>
