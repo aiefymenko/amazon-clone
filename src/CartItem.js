@@ -23,7 +23,6 @@ function CartItem({id , item}) {
         <select value={item.quantity}>
         {options}
         </select>
-     {item.quantity}
       </CartItemQuantity>
       <CartItemDelete>
         Delete
@@ -45,6 +44,7 @@ const Container = styled.div`
 padding-top: 12px;
 padding-bottom: 12px;
 display: flex;
+border-bottom: 1px solid #DDD;
 `
 
 const ImageContainer = styled.div`
@@ -74,9 +74,19 @@ h2 {
 const CartItemBottom = styled.div`
 display: flex;
 margin-top: 4px;
+align-items: center;
 `
 
 const CartItemQuantity = styled.div`
+select {
+  border-radius: 7px;
+  background-color: #F0F2F2;
+  padding: 8px;
+  box-shadow: 0 2px 5px rgba(15,17,17, .15);
+  :focus {
+    outline: none;
+  }
+}
 `
 
 const CartItemDelete = styled.div`
