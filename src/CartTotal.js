@@ -3,10 +3,11 @@ import styled from 'styled-components';
 
 
 
-function CartTotal() {
+function CartTotal({getTotalPrice}) {
+
   return (
     <Container>
-      <Subtotal> Subtotal (2 items) : $1,500 </Subtotal> 
+      <Subtotal> Subtotal (2 items) : ${getTotalPrice} </Subtotal> 
       <CheckoutButton> Proceed to checkout </CheckoutButton>
     </Container>
   )
