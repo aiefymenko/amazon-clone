@@ -5,6 +5,12 @@ import { db } from './firebase';
 
 function CartItem({id , item}) {
 
+  function deleteItem(e) {
+    e.preventDefault();
+    db.collection('cartItems').doc(id).delete();
+
+  }
+
   let options =[];
   for (let i = 1; i < Math.max(item.quantity + 1, 20); i++) {
     options.push(<option value={i}> Qty: {i}</option>)
@@ -32,7 +38,7 @@ function CartItem({id , item}) {
         {options}
         </select>
       </CartItemQuantity>
-      <CartItemDelete>
+      <CartItemDelete onClick={deleteItem}>
         Delete
       </CartItemDelete>
       </CartItemBottom>
