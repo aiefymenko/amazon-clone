@@ -3,7 +3,14 @@ import styled from 'styled-components';
 
 function Login() {
   return (
-    <Container>Login
+    <Container>
+      <Content>
+      <AmazonLogo />
+      <h1>Sign in to Amazong</h1>
+      <LoginButton>
+
+      </LoginButton>
+      </Content>
 
     </Container>
   )
@@ -12,4 +19,12 @@ function Login() {
 export default Login
 
 const Container = styled.div`
+`
+const Content = styled.div`
+`
+
+const AmazonLogo = styled.img`
+`
+
+const LoginButton = styled.button`
 `
