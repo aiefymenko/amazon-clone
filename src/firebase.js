@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // Import the functions you need from the SDKs you need
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
@@ -17,5 +18,7 @@ const firebaseApp = firebase.initializeApp({
 });
 
 const db = firebase.firestore();
+const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
 
-export { db };
+export { db, provider };
