@@ -2,12 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { auth, provider} from './firebase';
 
-function Login() {
+function Login({setUser}) {
 
   function signIn() {
     auth.signInWithPopup(provider).then((result) => {
       let user = result.user;
-      console.log(user);
+      let newUser = {
+        name: user.displayName,
+        email: user.email,
+        photo: user.photoURL
+      }
+      setUser(newUser);
     }).catch((error) => {
       alert(error.message);
     })
