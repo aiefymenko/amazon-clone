@@ -27,8 +27,6 @@ const [cartItems, setCartItems] = useState([]);
     getCartItems()
   }, []);
 
-  console.log("User", user);
-
 
 
   return (
