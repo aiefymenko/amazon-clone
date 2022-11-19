@@ -35,7 +35,6 @@ const [cartItems, setCartItems] = useState([]);
         !user ? (
           <Login setUser={setUser} />
         ) : (
-      
     <Container>
       <Header cartItems={cartItems} user={user} />
       <Routes>
