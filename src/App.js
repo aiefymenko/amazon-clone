@@ -37,16 +37,13 @@ const [cartItems, setCartItems] = useState([]);
         ) : (
       
     <Container>
-      
       <Header cartItems={cartItems} user={user} />
       <Routes>
         <Route exact path="/cart" element={<Cart cartItems={cartItems}/>}>
         </Route>
-
         <Route exact path="/" element={<Home/>}>
         </Route>
       </Routes>
-
     </Container>
         )}
     </Router>
