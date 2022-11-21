@@ -4,7 +4,7 @@ import Cart from './Cart';
 import Home from './Home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {useEffect, useState} from 'react';
-import {db} from './firebase';
+import {auth, db} from './firebase';
 import Login from './Login';
 import styled from 'styled-components';
 
@@ -27,6 +27,12 @@ const [cartItems, setCartItems] = useState([]);
     getCartItems()
   }, []);
 
+  function signOut() {
+    auth.signOut().then(() => {
+      setUser(null);
+    })
+  }
+
 
 
   return (
@@ -36,7 +42,10 @@ const [cartItems, setCartItems] = useState([]);
           <Login setUser={setUser} />
         ) : (
     <Container>
-      <Header cartItems={cartItems} user={user} />
+      <Header 
+      signOut = {signOut}
+      cartItems={cartItems} 
+      user={user} />
       <Routes>
         <Route exact path="/cart" element={<Cart cartItems={cartItems}/>}>
         </Route>
